@@ -47,6 +47,13 @@ app.get('/about', (req, res) => {
   });
 });
 
+// /projects link to projects page in header template
+app.get('/projects', (req, res) => {
+  res.render('project.hbs', {
+    pageTitle: 'Projects Page'
+  });
+});
+
 app.get('/bad', (req, res) => {
   res.send({
     errorMessage: 'Unable to handle request'
